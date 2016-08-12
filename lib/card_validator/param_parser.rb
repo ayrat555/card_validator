@@ -1,3 +1,5 @@
+require 'optparse'
+
 module CardValidator
   module ParamParser
     class << self
@@ -9,7 +11,6 @@ module CardValidator
             params[:card] = v
           end
         end.parse!
-        validate_params(params)
         params[:card]
       end
     end
